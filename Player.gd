@@ -127,7 +127,8 @@ func calculate_horizontal_movement(delta):
 	horizontal_velocity_y = calculate_velocity(vertical_movement, horizontal_velocity_y, delta)
 
 	# add camera rotation
-	var camera_rotation = $CameraBoundNode.rotation_degrees.y if $CameraBoundNode else 0
+#	var camera_rotation = $CameraBoundNode.rotation_degrees.y if $CameraBoundNode else 0
+	var camera_rotation = 0
 
 	return Vector2(horizontal_velocity_x, horizontal_velocity_y).rotated(deg2rad(-camera_rotation))
 
